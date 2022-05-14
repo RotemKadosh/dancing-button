@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/objectAnimator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/motionLayout"
+        android:src="@drawable/shake_unlock_animation"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/objectAnimator"
+        app:layout_constraintStart_toStartOf="@id/objectAnimator"
+        app:layout_constraintEnd_toEndOf="@id/objectAnimator"
+        android:text="AnimationVectorDrawable"/>
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layoutDescription="@xml/activity_main_scene"
+        app:layout_constraintBottom_toTopOf="@id/animationDrawable"
+        app:layout_constraintEnd_toEndOf="@+id/objectAnimator"
+        app:layout_constraintStart_toStartOf="@id/objectAnimator"
+        app:layout_constraintTop_toBottomOf="@id/objectAnimator">
+
+        <ImageView
+            android:id="@+id/motionLayoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_step_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/motionLayout"
+        app:layout_constraintStart_toStartOf="@id/motionLayout"
+        app:layout_constraintEnd_toEndOf="@id/motionLayout"
+        android:text="ViewTransition"/>
+
+
+    <ImageButton
+        android:id="@+id/animationDrawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_unlock_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/motionLayout"
+        app:layout_constraintStart_toStartOf="@id/motionLayout"
+        app:layout_constraintTop_toBottomOf="@id/motionLayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/animationDrawable"
+        app:layout_constraintStart_toStartOf="@id/animationDrawable"
+        app:layout_constraintEnd_toEndOf="@id/animationDrawable"
+        android:text="animationDrawable"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" />
+
+    <ViewTransition
+        android:id="@+id/shakeUnlockButton"
+        app:motionTarget="@+id/motionLayoutButton"
+        app:viewTransitionMode="noState"
+        app:duration="2000"
+        >
+        <KeyFrameSet>
+            <KeyCycle
+                app:framePosition="0"
+                app:wavePeriod="1"
+                android:translationX="-10dp"
+                android:rotation ="-20"
+                />
+            <KeyCycle
+                app:framePosition="50"
+                app:wavePeriod="1"
+                />
+            <KeyCycle
+                app:framePosition="70"
+                app:wavePeriod="1"
+                android:translationX="-3dp"
+                android:rotation ="-5"
+                />
+        </KeyFrameSet>
+    </ViewTransition>
+</appScene>
