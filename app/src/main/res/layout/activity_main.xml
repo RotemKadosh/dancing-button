@@ -7,6 +7,16 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/pulseObjectAnimator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/motionLayout"
+        android:src="@drawable/pulse_animation"/>
+
+    <ImageView
         android:id="@+id/objectAnimator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,0 +1,95 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="70dp"
+            android:height="70dp"
+            android:viewportWidth="70"
+            android:viewportHeight="70">
+            <group
+                android:name="scaleOne"
+                android:pivotX="50%"
+                android:pivotY="50%">
+                <path
+                    android:name="one"
+                    android:fillAlpha="0.03"
+                    android:fillColor="#0069E2"
+                    android:pathData="M35,35m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0"
+                    android:strokeAlpha="0.03" />
+            </group>
+
+            <group
+                android:name="scaleTwo"
+                android:pivotX="50%"
+                android:pivotY="50%">
+                <path
+                    android:name="two"
+                    android:fillAlpha="0.03"
+                    android:fillColor="#0069E2"
+                    android:pathData="M35,35m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0"
+                    android:strokeAlpha="0.03" />
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="one">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="250"
+                    android:propertyName="fillAlpha"
+                    android:valueFrom="0.03"
+                    android:valueTo="0.02" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="two">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="350"
+                    android:propertyName="fillAlpha"
+                    android:startOffset="50"
+                    android:valueFrom="0.03"
+                    android:valueTo="0.02" />
+
+            </set>
+        </aapt:attr>
+    </target>
+    <target
+        android:name="scaleOne">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="250"
+                    android:propertyName="scaleX"
+                    android:valueFrom="1"
+                    android:valueTo="1.4" />
+
+                <objectAnimator
+                    android:duration="250"
+                    android:propertyName="scaleY"
+                    android:valueFrom="1"
+                    android:valueTo="1.4" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="scaleTwo">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="350"
+                    android:propertyName="scaleX"
+                    android:startOffset="50"
+                    android:valueFrom="1"
+                    android:valueTo="1.4" />
+
+                <objectAnimator
+                    android:duration="350"
+                    android:propertyName="scaleY"
+                    android:startOffset="50"
+                    android:valueFrom="1"
+                    android:valueTo="1.4" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

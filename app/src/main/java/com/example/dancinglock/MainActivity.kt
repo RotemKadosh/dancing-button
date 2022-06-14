@@ -41,11 +41,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setVectorAnimationClickListener() {
+        val pulseDrawable :ImageView = findViewById(R.id.pulseObjectAnimator)
         val vectorDrawableAnimationButton: ImageView = findViewById<ImageView>(R.id.objectAnimator)
+        val pulseDrawableAvd = pulseDrawable.drawable as AnimatedVectorDrawable
         val avd = vectorDrawableAnimationButton.drawable as AnimatedVectorDrawable
         avd.registerAnimationCallback(callBack)
+        pulseDrawableAvd.registerAnimationCallback(callBack)
         vectorDrawableAnimationButton.setOnClickListener {
             avd.start()
+            pulseDrawableAvd.start()
         }
     }
 
