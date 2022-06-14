@@ -57,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         override fun onAnimationEnd(drawable: Drawable?) {
             super.onAnimationEnd(drawable)
             val avd = drawable as AnimatedVectorDrawable
-            avd.reset()
             avd.start()
         }
     }
